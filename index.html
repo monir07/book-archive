@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo-img.png" />
+    <title>Book-Archive</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- INPUT FORM START HERE -->
+        <form class="col-md-6 m-auto py-5">
+            <img class="rounded mx-auto d-block pb-4" src="images/logo-img.png" />
+            <div class="input-group mb-3">
+                <input type="text" id="search-field" class="form-control" placeholder="Search Book Here ...">
+                <div class="input-group-append">
+                    <button type="button" onclick="loadBookData()" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- SEARCH RESULT COUNTER  -->
+        <p class="text-muted" style="display: none;" id="resultCountText">About <span id="resultCount"></span> results
+            found. Showing here <span id="resultShow"></span></p>
+        <!-- SEARCH RESULT NOT      -->
+        <p class="text-muted" style="display: none;" id="noResult">No result found!</span></p>
+
+        <!-- SPINNER  -->
+        <div class="text-center d-none" id="loadSpinner">
+            <div class="spinner-grow text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-secondary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-success" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+        <!-- SEARCH RESULT SHOW CONTAINER  -->
+        <div class="card-deck  d-flex" id="resultContainer">
+        </div>
+
+        <!-- JS SCRIPT INITIALIZATION -->
+        <script src='archive.js'></script>
+</body>
+
+</html>
